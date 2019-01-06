@@ -16,7 +16,7 @@ var jqxhr = $.getJSON("codebeautify.json", function() {
   .done(function(data) {
      $.each( data.instances, function( i, item ) {
         
-        $( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank'>" + item.title + "</a>" ).appendTo( "#images" );
+        $( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank'>" + item.title + "</a>" ).appendTo( "#websites" );
  
       });
 
@@ -42,6 +42,8 @@ var jqxhr = $.getJSON("codebeautify.json", function() {
 </head>
 <body>
 	<h1>EverFlorist - An Evanston Illinois Florist</h1> 
-	<div id="images">Hello, World!</div>
+	<div><ol id="websites">Hello, World!</ol></div>
+	<div>https://api.letsvalidate.com/v1/thumbs?url=floranext.com</div>
+
 </body>
 </html>
