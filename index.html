@@ -13,15 +13,12 @@
 var jqxhr = $.getJSON("codebeautify.json", function() {
   console.log( "success" );
 })
-  .done(function() {
-    console.log( "second success" );
+  .done(function(data) {
+   
+   console.log(data);
+
   })
-  .fail(function() {
-    console.log( "error" );
-  })
-  .always(function() {
-    console.log( "complete" );
-  });
+ 
  
 
 
