@@ -14,8 +14,12 @@ var jqxhr = $.getJSON("codebeautify.json", function() {
   console.log( "success" );
 })
   .done(function(data) {
-   
-   console.log(data.instances);
+     $.each( data.instances, function( i, item ) {
+        
+        $( "<p>" ).text( item.domain ).appendTo( "#images" );
+ 
+      });
+
 
   })
  
