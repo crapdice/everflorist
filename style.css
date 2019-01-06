@@ -1,29 +1,32 @@
 		
-		body {
-			font-family: "Roboto";
-		}
-		
-		h1 {
-			font-family:"Cherry Cream Soda", cursive;
-			word-spacing:2px;
-			letter-spacing: 2px;
-			font-size: 32px;
-		}
+body {
+	font-family: "Roboto";
+}
 
-		h2 {
-			font-family: 'Raleway Dots'
-		}
+h1 {
+	font-family:"Cherry Cream Soda", cursive;
+	word-spacing:2px;
+	letter-spacing: 2px;
+	font-size: 32px;
+}
 
-		#websites li a {
-			text-decoration: none;
-			text-transform: capitalize;
-			font-size: 18px;
-			font-family: "Roboto";
-		}
+h2 {
+	font-family: 'Raleway Dots'
+}
+
+
 
 #wrapper {
 	width: 700px;
 	margin: 0 auto;
+}
+
+ 
+ #websites li a {
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 18px;
+	font-family: "Roboto";
 }
 
 .instance {
