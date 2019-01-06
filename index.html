@@ -10,26 +10,26 @@
 $(document).ready(function(){
 
 	$('select').on('change', function() {
-  		alert( this.value );
+  	
+  		var status = ( this.value );
+		
+		var jqxhr = $.getJSON("codebeautify.json", function() {
+			
+			console.log( "success" );
+		})
+
+		.done(function(data) {
+
+  			$.each( data.instances, function( i, item ) {
+
+  				if(item.state == status) {
+ 
+     				$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow'>" + item.title + "</a> - " + item.state).appendTo( "#websites" );
+ 				}
+ 			});
+  		})
+ 
 	});
-
-
-
-var jqxhr = $.getJSON("codebeautify.json", function() {
-	console.log( "success" );
-})
-
-	.done(function(data) {
-
-  		$.each( data.instances, function( i, item ) {
-
-  			if(item.state =="active") {
- 
-     			$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow'>" + item.title + "</a> - " + item.state).appendTo( "#websites" );
- 			}
- 		});
-  	})
- 
 
 })();
 </script>
