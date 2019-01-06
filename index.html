@@ -5,39 +5,8 @@
   <meta name="viewport" content="width=device-width">
 	<title>EverFlorist - An Evanston Illinois Florist</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<script>
-
-$(document).ready(function(){
-
-	$('select').on('change', function() {
-  	
-  		$( "#websites" ).empty();
-
-  		var status = ( this.value );
-		
-		var jqxhr = $.getJSON("codebeautify.json", function() {
-			
-			console.log( "success" );
-		})
-
-		.done(function(data) {
-
-  			$.each( data.instances, function( i, item ) {
-
-  				if(item.state == status) {
- 
-     				$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow'>" + item.title + "</a> - " + item.state).appendTo( "#websites" );
- 				}
- 			});
-  		})
- 
-	});
-
-})();
-</script>
-
-	  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,800" rel="stylesheet">
-  		<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,800" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400" rel="stylesheet">
 	<style>
 		
 		body {
@@ -58,17 +27,21 @@ $(document).ready(function(){
 	</style>
 </head>
 <body>
+	
 	<h1>EverFlorist - An Evanston Illinois Florist</h1> 
-	<select>
-  		<option value="active" selected="selected">active</option>
-  		<option value="suspended">inactive</option>
-	</select>
-	<div>
-		<ol id="websites">Flowers!</ol>
-	</div>
-
 	<div>https://api.letsvalidate.com/v1/thumbs?url=floranext.com</div>
 	<div>https://www.chekkit.io/</div>
+
+	<div>
+		<h2>Capturing Local and Social Reviews</h2>
+		<ul>
+		<li>https://www.yelp.com/writeareview/biz/{company_id}</li>
+		<li>https://support.google.com/business/answer/7035772?hl=en</li>
+		<li>https://search.google.com/local/writereview?placeid={company_id}</li>
+		<li>https://www.facebook.com/{your business page}/reviews/</li>
+		</ul>
+	</div>
+
 
 </body>
 </html>
