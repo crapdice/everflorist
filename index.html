@@ -11,6 +11,8 @@ $(document).ready(function(){
 
 	$('select').on('change', function() {
   	
+  		$( "#websites" ).empty();
+
   		var status = ( this.value );
 		
 		var jqxhr = $.getJSON("codebeautify.json", function() {
