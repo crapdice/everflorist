@@ -26,12 +26,14 @@ $(document).ready(function(){
 
   				if(item.state == status) {
  
-     				$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow'>" + item.title + "</a> - " + item.state).appendTo( "#websites" );
+     				$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow'>" + item.title + "</a> - <a href='https://my.floranext.com/instances/'" + item.id + "'>instance</a>").appendTo( "#websites" );
  				}
  			});
   		})
  
 	});
+
+ 
 
 })();
 </script>
