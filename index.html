@@ -16,7 +16,7 @@ var jqxhr = $.getJSON("codebeautify.json", function() {
   .done(function(data) {
      $.each( data.instances, function( i, item ) {
         
-        $( "<li>" ).html("<a href='http://www." + item.domain + "' target='_blank'>" + item.title + "</a>" ).appendTo( "#images" );
+        $( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank'>" + item.title + "</a>" ).appendTo( "#images" );
  
       });
 
