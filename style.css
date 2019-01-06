@@ -29,6 +29,6 @@ h2 {
 	font-family: "Roboto";
 }
 
-.instance {
+ #websites li a.instance {
 	font-size: 10px
 }
