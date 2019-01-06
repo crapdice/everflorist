@@ -6,6 +6,25 @@
 <head>
 	<title>EverFlorist - An Evanston Illinois Florist</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script>
+(function() {
+  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
+</script>
+
 	  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,800" rel="stylesheet">
   		<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400" rel="stylesheet">
 	<style>
@@ -19,6 +38,6 @@
 </head>
 <body>
 	<h1>EverFlorist - An Evanston Illinois Florist</h1> 
-	<div>Hello, World!</div>
+	<div id="images">Hello, World!</div>
 </body>
 </html>
