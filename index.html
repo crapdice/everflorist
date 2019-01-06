@@ -8,20 +8,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script>
 (function() {
-  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 3 ) {
-          return false;
-        }
-      });
-    });
+
+	$.getJSON( "codebeautify.json", function( data ) {
+  		var items = [];
+  		$.each( data, function( key, val ) {
+    	items.push( "<li id='" + key + "'>" + val + "</li>" );
+  		});
+ 
+ 	 $( "<ul/>", {
+    	"class": "my-new-list",
+    	html: items.join( "" )
+  		}).appendTo( "body" );
+		});
 })();
 </script>
 
