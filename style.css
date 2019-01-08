@@ -32,3 +32,10 @@ h2 {
  #websites li a.instance {
 	font-size: 10px
 }
+
+/*fnx*/
+
+#nav {
+    font-size: 18px;
+    font-weight: bolder;
+}
