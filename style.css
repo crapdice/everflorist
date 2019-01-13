@@ -17,9 +17,13 @@ h2 {
 
 select {
 
-	font-size: 30px;
+    font-size: 30px;
     border-radius: 50px;
     padding: 0 50px;
+    margin: 0 auto;
+    min-width: 200px;
+    display: block;
+    background: #add;
 }
 
 #wrapper {
