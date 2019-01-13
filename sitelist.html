@@ -13,9 +13,9 @@ $(document).ready(function(){
   	
   		$( "#websites" ).empty();
 
-  		var status = ( this.value );
+  		const status = ( this.value );
 		
-		var jqxhr = $.getJSON("codebeautify.json", function() {
+		const jqxhr = $.getJSON("codebeautify.json", function() {
 			
 			console.log( "success" );
 		})
