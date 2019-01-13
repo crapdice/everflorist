@@ -26,7 +26,7 @@ $(document).ready(function(){
 
   				if(item.state == status) {
  
-     				$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow'>" + item.title + "</a> - <a href='https://my.floranext.com/instances/" + item.id + "' class='instance' target='_blank'>" + item.id + "</a>").appendTo( "#websites" );
+     				$( "<li />" ).html("<a href='http://www." + item.domain + "' target='_blank' rel='nofollow title='" + item.status + "'>" + item.title + "</a> - <a href='https://my.floranext.com/instances/" + item.id + "' class='instance' target='_blank'>" + item.id + "</a>").appendTo( "#websites" );
  				}
  			});
   		})
